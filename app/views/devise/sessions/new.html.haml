@@ -1,0 +1,9 @@
+.row
+  .col-sm-6.offset-sm-3
+    %h4 Login
+
+  .col-sm-6.offset-sm-3
+    = simple_form_for @user,url: user_session_path do |f|
+      = f.input :email
+      = f.input :password
+      = f.submit 'Login', class: 'btn btn-primary'
